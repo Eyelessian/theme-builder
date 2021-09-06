@@ -2,7 +2,7 @@
   rules:
 
 build-job:
-  stage: build
+  stage: .pre
   script:
     - npm ci
     - npm run build --if-present
@@ -13,6 +13,6 @@ test-job:
     - npm test
 
 docker-job:
-  stage: docker
+  stage: build
   script:
     - docker build .
