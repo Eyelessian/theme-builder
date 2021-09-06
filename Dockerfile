@@ -14,8 +14,8 @@ WORKDIR /app
 # This will copy everything from the source path 
 # --more of a convenience when testing locally.
 COPY . .
-# If you are building your code for production
-RUN npm ci --only=production
+
+RUN npm ci
 # Bundle app source
 COPY . /app
 EXPOSE 3000
